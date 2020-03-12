@@ -10,3 +10,18 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
+header#demo {
+  height: 110vh;
+  background-repeat: no-repeat;
+  background-image: url('./img/martin-widenka-1jXrkaU9BGE-unsplash.jpg');
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 115, 255);
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
