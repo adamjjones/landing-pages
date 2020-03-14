@@ -10,9 +10,33 @@ body {
   margin: 0;
   min-height: 100%;
 }
+body nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
-header#demo {
-  height: 110vh;
+nav div{
+  display: flex;
+  justify-content: space-around;
+  background-color: lightblue;
+  padding: 15px;
+}
+
+@keyframes fadein {
+  0% { position: relative; top: 0px; left: 100%; }
+  25% { position: relative; top: 0px; left: 87%; }
+  33% { position: relative; top: 0px; left: 75%}
+  50% { position: relative; top: 0px;  left: 66%;}
+  66% { position: relative; top: 0px;  left: 50%;}
+  75% { position: relative; top: 0px; left: 37%; }
+  87% { position: relative; top: 0px;  left: 25%;}
+  95% { position: relative; top: 0px;  left: 12%;}
+  100% { position: relative; top: 0px; left: 0%; }
+}
+
+header#demo{
+  height: 100vh;
   background-repeat: no-repeat;
   background-image: url('./img/martin-widenka-1jXrkaU9BGE-unsplash (1).jpg');
   display: flex;
@@ -23,6 +47,14 @@ header#demo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#demo h1 {
+  animation-name: fadein;
+  animation-duration: 450ms;
+  animation-delay: 500ms;
+  animation-timing-function: linear;
+  
 }
 
 button {
@@ -36,13 +68,13 @@ button {
 }
 
 button:hover {
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .middle {
   display: flex;
   flex-wrap: nowrap;
-  background-color: #fcc37d;
+  background-color: #ffe0bb;
 }
 
 .middle p {
@@ -51,8 +83,14 @@ button:hover {
 }
 
 .bottom {
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
   padding: 50px;
+}
+
+p {
+  text-align: center;
 }
 
  ul {
@@ -62,4 +100,14 @@ button:hover {
    line-height: 2;
  }
 
-.bottom li{list-style: none;}
+ .social {
+   display: flex;
+   justify-content: center;
+   font-size: 30px;
+ }
+   
+   .bottom li {
+     list-style: none;
+     margin-right: 30px;
+     margin-left: 30px;
+   }
